@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #aeaeae;
+    margin: 0;
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700&display=swap');
+  }
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+ }
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;        
+    width: 90%; /* برای موبایل بهتر است */
+    max-width: 380px; /* حداکثر عرض در دسکتاپ */
+    margin: 20px auto;  
+    padding: 32px;
+    border-radius: 40px; 
+    background: #e0e0e0;
+    box-shadow:  5px 5px 10px #bebebe, 
+                 -5px -5px 10px #ffffff;
+    
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #252525; 
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;  
+  justify-content: center;
+  max-width: 500px; /* محدود کردن عرض برای زیبایی در دسکتاپ */
+  width: 100%;    /* در موبایل تمام عرض را پر می‌کند */
+}
+
+.skill-tag {
+  padding: 10px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+  color: #444;
+  border-radius: 20px; 
+  border: 1px solid #d1d1d1; 
+  background: #e0e0e0;
+  box-shadow: 6px 6px 12px #bebebe, 
+             -6px -6px 12px #ffffff;
+  border: none;
+}
+
+/* استایل برای حالت موبایل (Responsive Adjustment) */
+@media (max-width: 480px) {
+ 
+ .portfolio {
+    
+    /* حذف کلمه inset برای برجسته شدن کارت */
+    
+}
+
+ 
+  .skills-container {
+    gap: 10px; /* کمی فاصله کمتر در موبایل برای صرفه‌جویی در فضا */
+  }
+  
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+}
